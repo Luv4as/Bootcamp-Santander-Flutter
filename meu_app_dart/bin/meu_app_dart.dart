@@ -1,8 +1,4 @@
-import 'package:meu_app_dart/Classes/enum/tipo_notificacao.dart';
-import 'package:meu_app_dart/Classes/pessoaFisica.dart';
-
+import 'package:meu_app_dart/meu_app_dart.dart' as meu_app_dart;
 void main(List<String> arguments) {
-
-  var pessoaFisica1 = PessoaFisica("danilo", "Rua 2", "12345678901", tipoNotificacao: TipoNotificacao.SMS);
-  print(pessoaFisica1);
+  meu_app_dart.execute();
 }
