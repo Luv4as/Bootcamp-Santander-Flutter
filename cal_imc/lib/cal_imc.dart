@@ -1,3 +1,3 @@
-int calculate() {
-  return 6 * 7;
+void execute() {
+  print("---------Bem vindo a calculadora de IMC--------");
 }
