@@ -25,5 +25,19 @@ class ConsoleUtils {
     print(texto);
     return lerInt();
   }
-  
+
+  static double? lerDouble() {
+    var value = lerString();
+
+    try {
+      return double.parse(value);
+    } catch (e) {
+      return null;
+    }
+  }
+
+  static double? lerDoubleComTexto(String texto) {
+    print(texto);
+    return lerDouble();
+  }
 }
