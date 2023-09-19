@@ -4,9 +4,9 @@ import 'package:test/test.dart';
 void main() {
   // esses individuais fazem a mesma coisa dos grupos
 
-  // test('Calcula o valor do produto com desconto sem porcentagem', () {
-  //   expect(app.calcularDesconto(1000, 150, false), 850);
-  // });
+  test('Calcula o valor do produto com desconto sem porcentagem', () {
+    expect(app.calcularDesconto(1000, 150, false), 850);
+  });
 
   // test(
   //     'Calcula o valor do produto com desconto sem porcentagem, passando o valor do produto zerado',
