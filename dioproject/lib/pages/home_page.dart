@@ -1,5 +1,4 @@
-import 'dart:math';
-
+import 'package:dioproject/service/gera_num_aleatorio.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,13 +11,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var num = 0;
 
-  void _geraNumAleatorio() {
-    Random numAleatorio = Random();
-    setState(() {
-      num = numAleatorio.nextInt(100);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     debugPrint("Chamando o build");
@@ -28,7 +20,12 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(child: Text("O número gerado foi: ${num.toString()}")),
       floatingActionButton: FloatingActionButton(
-          onPressed: _geraNumAleatorio, child: const Icon(Icons.shuffle_sharp)),
+          child: const Icon(Icons.shuffle_sharp),
+          onPressed: () {
+            setState(() {
+              num = GeraNumAleatorio.geraNumAleatorio(100);
+            });
+          }),
     );
   }
 }
