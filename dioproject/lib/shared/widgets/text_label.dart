@@ -6,7 +6,10 @@ class TextLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(texto,
-        style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600));
+    return Container(
+      margin: EdgeInsets.only(top: 36),
+      child: Text(texto,
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+    );
   }
 }
