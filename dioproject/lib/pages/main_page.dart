@@ -1,7 +1,7 @@
-import 'package:dioproject/pages/dados_cadastrais.dart';
 import 'package:dioproject/pages/pagina1.dart';
 import 'package:dioproject/pages/pagina2.dart';
 import 'package:dioproject/pages/pagina3.dart';
+import 'package:dioproject/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -21,58 +21,7 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           title: const Text("Main page"),
         ),
-        drawer: Drawer(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 32),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 32,
-                ),
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 0, vertical: 8),
-                      width: double.infinity,
-                      child: const Text("Dados cadastrais")),
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const DadosCadastraisPage()));
-                  },
-                ),
-                const Divider(),
-                const SizedBox(
-                  height: 16,
-                ),
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 0, vertical: 8),
-                      width: double.infinity,
-                      child: const Text("Configurações")),
-                  onTap: () {},
-                ),
-                const Divider(),
-                const SizedBox(
-                  height: 16,
-                ),
-                InkWell(
-                  child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 0, vertical: 8),
-                      width: double.infinity,
-                      child: const Text("Termos de uso e privacidade")),
-                  onTap: () {},
-                ),
-                const Divider()
-              ],
-            ),
-          ),
-        ),
+        drawer: CustomDrawer(),
         body: Column(
           children: [
             Expanded(

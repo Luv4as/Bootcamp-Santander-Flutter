@@ -26,7 +26,6 @@ class _DadosCadastraisPageState extends State<DadosCadastraisPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     niveis = nivelRepository.retornaMiveis();
     linguagens = linguagensRepository.retornaLinguagens();
     super.initState();
