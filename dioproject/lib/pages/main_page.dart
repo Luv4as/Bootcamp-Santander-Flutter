@@ -1,6 +1,7 @@
 import 'package:dioproject/pages/card.dart';
 import 'package:dioproject/pages/image_assets.dart';
-import 'package:dioproject/pages/list_view_h.dart';
+import 'package:dioproject/pages/list_view.dart';
+import 'package:dioproject/pages/list_view_horizontal.dart';
 import 'package:dioproject/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -35,21 +36,24 @@ class _MainPageState extends State<MainPage> {
                 children: const [
                   CardPage(),
                   ImageAssetsPage(),
-                  ListViewHPage()
+                  ListViewPage(),
+                  ListViewHorizontal()
                 ],
               ),
             ),
             BottomNavigationBar(
+                type: BottomNavigationBarType.fixed,
                 onTap: (value) {
                   controller.jumpToPage(value);
                 },
                 currentIndex: posicaoPagina,
-                items: [
+                items: const [
                   BottomNavigationBarItem(
                       label: "Pag1", icon: Icon(Icons.home)),
                   BottomNavigationBarItem(label: "Pag2", icon: Icon(Icons.add)),
                   BottomNavigationBarItem(
-                      label: "Pag3", icon: Icon(Icons.person))
+                      label: "Pag3", icon: Icon(Icons.person)),
+                  BottomNavigationBarItem(label: "Pag4", icon: Icon(Icons.list))
                 ])
           ],
         ),

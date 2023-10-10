@@ -12,7 +12,7 @@ class CardPage extends StatefulWidget {
 
 class _CardPageState extends State<CardPage> {
   CardDetail? cardDetail;
-  CardDetailRepository cardDetailRepository = CardDetailRepository();
+  var cardDetailRepository = CardDetailRepository();
 
   @override
   void initState() {
