@@ -1,6 +1,6 @@
 import 'package:dioproject/pages/card.dart';
-import 'package:dioproject/pages/pagina2.dart';
-import 'package:dioproject/pages/pagina3.dart';
+import 'package:dioproject/pages/image_assets.dart';
+import 'package:dioproject/pages/list_view_h.dart';
 import 'package:dioproject/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +32,11 @@ class _MainPageState extends State<MainPage> {
                     posicaoPagina = value;
                   });
                 },
-                children: const [CardPage(), Pagina2Page(), Pagina3Page()],
+                children: const [
+                  CardPage(),
+                  ImageAssetsPage(),
+                  ListViewHPage()
+                ],
               ),
             ),
             BottomNavigationBar(
