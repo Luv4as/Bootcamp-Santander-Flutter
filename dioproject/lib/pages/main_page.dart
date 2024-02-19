@@ -2,6 +2,7 @@ import 'package:dioproject/pages/card.dart';
 import 'package:dioproject/pages/image_assets.dart';
 import 'package:dioproject/pages/list_view.dart';
 import 'package:dioproject/pages/list_view_horizontal.dart';
+import 'package:dioproject/pages/tarefa_page.dart';
 import 'package:dioproject/shared/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,8 @@ class _MainPageState extends State<MainPage> {
                   CardPage(),
                   ImageAssetsPage(),
                   ListViewPage(),
-                  ListViewHorizontal()
+                  ListViewHorizontal(),
+                  TarefaPage(),
                 ],
               ),
             ),
@@ -53,7 +55,10 @@ class _MainPageState extends State<MainPage> {
                   BottomNavigationBarItem(label: "Pag2", icon: Icon(Icons.add)),
                   BottomNavigationBarItem(
                       label: "Pag3", icon: Icon(Icons.person)),
-                  BottomNavigationBarItem(label: "Pag4", icon: Icon(Icons.list))
+                  BottomNavigationBarItem(
+                      label: "Pag4", icon: Icon(Icons.image)),
+                  BottomNavigationBarItem(
+                      label: "tarefas", icon: Icon(Icons.list_alt_outlined)),
                 ])
           ],
         ),

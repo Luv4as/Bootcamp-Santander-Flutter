@@ -1,4 +1,5 @@
 import 'package:dioproject/pages/main_page.dart';
+import 'package:dioproject/shared/app_images.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -36,8 +37,8 @@ class _LoginPageState extends State<LoginPage> {
                       Expanded(child: Container()),
                       Expanded(
                         flex: 8,
-                        child: Image.network(
-                          "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+                        child: Image.asset(
+                          AppImages.notionLogo,
                           height: 125,
                         ),
                       ),
